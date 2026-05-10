@@ -1,0 +1,14 @@
+# Changelog
+
+## [1.0.0] — April 2026
+
+### Added
+- `DictionaryGenerator` — 7 mutation strategies, name+DOB combos, leet-speak, keyboard patterns
+- `HashExtractor` — MD5, SHA-1, SHA-256, SHA-512, NTLM hashing + /etc/shadow parser + hash identifier
+- `BruteForceSimulator` — dictionary attack, incremental brute-force, time-to-crack estimator
+- `PasswordStrengthAnalyzer` — entropy, complexity scoring, policy checker, batch analysis
+- `ReportGenerator` — structured JSON audit report with 10 security recommendations
+- `app.py` — full Streamlit dashboard with 6 interactive tabs
+- Simulation mode — 10 realistic shadow entries + 12 test passwords embedded for demo
+- CLI entry point with `--name`, `--dob`, `--words`, `--output` flags
+- `requirements.txt`, `runtime.txt`, `README.md`, `CONTRIBUTING.md`, `.gitignore`

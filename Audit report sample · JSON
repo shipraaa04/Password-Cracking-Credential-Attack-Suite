@@ -1,0 +1,645 @@
+{
+  "report_metadata": {
+    "title": "Password Security Audit Report",
+    "generated_at": "2026-05-09T13:51:37.246874",
+    "tool": "Password Cracking & Credential Attack Suite v1.0",
+    "mode": "Ethical Lab / Simulation"
+  },
+  "executive_summary": {
+    "passwords_analyzed": 12,
+    "weak_or_very_weak": 6,
+    "weak_percentage": 50.0,
+    "hashes_targeted": 2,
+    "hashes_cracked": 0,
+    "crack_success_rate": 0.0,
+    "wordlist_size": 6385,
+    "overall_risk": "LOW",
+    "grade_distribution": {
+      "Very Weak": 6,
+      "Moderate": 4,
+      "Strong": 2
+    }
+  },
+  "dictionary_generator": {
+    "total_words": 6385,
+    "avg_length": 9.86,
+    "min_length": 4,
+    "max_length": 15,
+    "sample": [
+      "!!@#$%^1!",
+      "!$up3rm@n",
+      "!0115",
+      "!0115!@#",
+      "!01151!",
+      "!0115alice!",
+      "!0ff1c3",
+      "!110v3y0u",
+      "!12345!",
+      "!12345!@#",
+      "!123456#1",
+      "!123456@1",
+      "!123qwe1!",
+      "!15!",
+      "!15alice!@#",
+      "!15alice@1",
+      "!1Q2W3E",
+      "!1Q2W3E4R",
+      "!1q2w33",
+      "!1q2w334r"
+    ]
+  },
+  "hash_extraction": [
+    {
+      "username": "systemd-network",
+      "hash": "!*",
+      "algorithm": "DES-crypt"
+    },
+    {
+      "username": "polkitd",
+      "hash": "!*",
+      "algorithm": "DES-crypt"
+    }
+  ],
+  "brute_force_simulation": {
+    "attack_type": "Dictionary",
+    "algorithm": "MD5",
+    "wordlist_size": 2000,
+    "total_targets": 2,
+    "cracked_count": 0,
+    "failed_count": 2,
+    "cracked": [],
+    "failed_users": [
+      "systemd-network",
+      "polkitd"
+    ],
+    "attempts": 2000,
+    "elapsed_seconds": 0.0019,
+    "rate_per_sec": 1077258
+  },
+  "brute_force_estimates": [
+    {
+      "password": "abc",
+      "length": 3,
+      "algorithm": "MD5",
+      "charset_size": 26,
+      "keyspace": 17576,
+      "keyspace_display": "17,576",
+      "crack_rate_ps": "10,000,000",
+      "time_avg_seconds": 0.0008788,
+      "time_avg_display": "< 1 second",
+      "time_max_display": "< 1 second"
+    },
+    {
+      "password": "password",
+      "length": 8,
+      "algorithm": "MD5",
+      "charset_size": 26,
+      "keyspace": 208827064576,
+      "keyspace_display": "208,827,064,576",
+      "crack_rate_ps": "10,000,000",
+      "time_avg_seconds": 10441.3532288,
+      "time_avg_display": "2.9 hours",
+      "time_max_display": "5.8 hours"
+    },
+    {
+      "password": "Pass1!",
+      "length": 6,
+      "algorithm": "SHA256",
+      "charset_size": 94,
+      "keyspace": 689869781056,
+      "keyspace_display": "689,869,781,056",
+      "crack_rate_ps": "3,000,000",
+      "time_avg_seconds": 114978.29684266666,
+      "time_avg_display": "1.3 days",
+      "time_max_display": "2.7 days"
+    },
+    {
+      "password": "Tr0ub4dor!",
+      "length": 10,
+      "algorithm": "SHA512",
+      "charset_size": 94,
+      "keyspace": 53861511409489970176,
+      "keyspace_display": "53,861,511,409,489,970,176",
+      "crack_rate_ps": "1,000,000",
+      "time_avg_seconds": 26930755704744.984,
+      "time_avg_display": "853968.7 years",
+      "time_max_display": "1707937.3 years"
+    },
+    {
+      "password": "P@ssw0rd123!",
+      "length": 12,
+      "algorithm": "SHA512",
+      "charset_size": 94,
+      "keyspace": 475920314814253376475136,
+      "keyspace_display": "475,920,314,814,253,376,475,136",
+      "crack_rate_ps": "1,000,000",
+      "time_avg_seconds": 2.379601574071267e+17,
+      "time_avg_display": "7.55e+09 years",
+      "time_max_display": "1.51e+10 years"
+    },
+    {
+      "password": "xK#9mL2$qW",
+      "length": 10,
+      "algorithm": "BCRYPT",
+      "charset_size": 94,
+      "keyspace": 53861511409489970176,
+      "keyspace_display": "53,861,511,409,489,970,176",
+      "crack_rate_ps": "10",
+      "time_avg_seconds": 2.6930755704744986e+18,
+      "time_avg_display": "8.54e+10 years",
+      "time_max_display": "1.71e+11 years"
+    }
+  ],
+  "strength_analysis": [
+    {
+      "password": "abc",
+      "masked": "a*c",
+      "length": 3,
+      "score": 1,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 14.1,
+      "shannon_entropy": 1.585,
+      "charset_size": 26,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": false,
+      "has_symbol": false,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [
+        "Too short (< 6 characters)",
+        "No uppercase letters",
+        "No digits",
+        "No special characters"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add numbers (0-9)",
+        "Add symbols (!@#$%^&*)"
+      ]
+    },
+    {
+      "password": "password",
+      "masked": "p******d",
+      "length": 8,
+      "score": 0,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 37.6,
+      "shannon_entropy": 2.75,
+      "charset_size": 26,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": false,
+      "has_symbol": false,
+      "is_common": true,
+      "is_keyboard": false,
+      "issues": [
+        "No uppercase letters",
+        "No digits",
+        "No special characters",
+        "Common/dictionary password \u2014 easily cracked"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add numbers (0-9)",
+        "Add symbols (!@#$%^&*)",
+        "Use a unique passphrase not found in any dictionary"
+      ]
+    },
+    {
+      "password": "123456",
+      "masked": "1****6",
+      "length": 6,
+      "score": 0,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 28.2,
+      "shannon_entropy": 2.585,
+      "charset_size": 26,
+      "has_lower": false,
+      "has_upper": false,
+      "has_digit": true,
+      "has_symbol": false,
+      "is_common": true,
+      "is_keyboard": false,
+      "issues": [
+        "Short \u2014 recommend 12+ characters",
+        "No uppercase letters",
+        "No special characters",
+        "No lowercase letters",
+        "Common/dictionary password \u2014 easily cracked"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add symbols (!@#$%^&*)",
+        "Add lowercase letters (a-z)",
+        "Use a unique passphrase not found in any dictionary"
+      ]
+    },
+    {
+      "password": "qwerty123",
+      "masked": "q*******3",
+      "length": 9,
+      "score": 2,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 46.53,
+      "shannon_entropy": 3.17,
+      "charset_size": 36,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": true,
+      "has_symbol": false,
+      "is_common": false,
+      "is_keyboard": true,
+      "issues": [
+        "No uppercase letters",
+        "No special characters",
+        "Contains keyboard pattern (qwerty, 1234\u2026)"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add symbols (!@#$%^&*)",
+        "Avoid sequential keyboard patterns"
+      ]
+    },
+    {
+      "password": "Alice2024!",
+      "masked": "A********!",
+      "length": 10,
+      "score": 6,
+      "max_score": 10,
+      "grade": "Moderate",
+      "color": "yellow",
+      "entropy_bits": 65.55,
+      "shannon_entropy": 3.122,
+      "charset_size": 94,
+      "has_lower": true,
+      "has_upper": true,
+      "has_digit": true,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [],
+      "tips": [
+        "Password meets all complexity requirements. Consider using a passphrase for even better security."
+      ]
+    },
+    {
+      "password": "Secure#Pass99",
+      "masked": "S***********9",
+      "length": 13,
+      "score": 7,
+      "max_score": 10,
+      "grade": "Strong",
+      "color": "green",
+      "entropy_bits": 85.21,
+      "shannon_entropy": 3.239,
+      "charset_size": 94,
+      "has_lower": true,
+      "has_upper": true,
+      "has_digit": true,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [],
+      "tips": [
+        "Password meets all complexity requirements. Consider using a passphrase for even better security."
+      ]
+    },
+    {
+      "password": "P@ssw0rd",
+      "masked": "P******d",
+      "length": 8,
+      "score": 6,
+      "max_score": 10,
+      "grade": "Moderate",
+      "color": "yellow",
+      "entropy_bits": 52.44,
+      "shannon_entropy": 2.75,
+      "charset_size": 94,
+      "has_lower": true,
+      "has_upper": true,
+      "has_digit": true,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [],
+      "tips": [
+        "Password meets all complexity requirements. Consider using a passphrase for even better security."
+      ]
+    },
+    {
+      "password": "Tr0ub4dor&3",
+      "masked": "T*********3",
+      "length": 11,
+      "score": 6,
+      "max_score": 10,
+      "grade": "Moderate",
+      "color": "yellow",
+      "entropy_bits": 72.1,
+      "shannon_entropy": 3.278,
+      "charset_size": 94,
+      "has_lower": true,
+      "has_upper": true,
+      "has_digit": true,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [],
+      "tips": [
+        "Password meets all complexity requirements. Consider using a passphrase for even better security."
+      ]
+    },
+    {
+      "password": "correct-horse-battery-staple",
+      "masked": "c**************************e",
+      "length": 28,
+      "score": 6,
+      "max_score": 10,
+      "grade": "Moderate",
+      "color": "yellow",
+      "entropy_bits": 164.02,
+      "shannon_entropy": 3.495,
+      "charset_size": 58,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": false,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [
+        "No uppercase letters",
+        "No digits"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add numbers (0-9)"
+      ]
+    },
+    {
+      "password": "xK#9mL2$qWnR!8",
+      "masked": "x************8",
+      "length": 14,
+      "score": 7,
+      "max_score": 10,
+      "grade": "Strong",
+      "color": "green",
+      "entropy_bits": 91.76,
+      "shannon_entropy": 3.807,
+      "charset_size": 94,
+      "has_lower": true,
+      "has_upper": true,
+      "has_digit": true,
+      "has_symbol": true,
+      "is_common": false,
+      "is_keyboard": false,
+      "issues": [],
+      "tips": [
+        "Password meets all complexity requirements. Consider using a passphrase for even better security."
+      ]
+    },
+    {
+      "password": "admin",
+      "masked": "a***n",
+      "length": 5,
+      "score": 0,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 23.5,
+      "shannon_entropy": 2.322,
+      "charset_size": 26,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": false,
+      "has_symbol": false,
+      "is_common": true,
+      "is_keyboard": false,
+      "issues": [
+        "Too short (< 6 characters)",
+        "No uppercase letters",
+        "No digits",
+        "No special characters",
+        "Common/dictionary password \u2014 easily cracked"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add numbers (0-9)",
+        "Add symbols (!@#$%^&*)",
+        "Use a unique passphrase not found in any dictionary"
+      ]
+    },
+    {
+      "password": "iloveyou",
+      "masked": "i******u",
+      "length": 8,
+      "score": 0,
+      "max_score": 10,
+      "grade": "Very Weak",
+      "color": "red",
+      "entropy_bits": 37.6,
+      "shannon_entropy": 2.75,
+      "charset_size": 26,
+      "has_lower": true,
+      "has_upper": false,
+      "has_digit": false,
+      "has_symbol": false,
+      "is_common": true,
+      "is_keyboard": false,
+      "issues": [
+        "No uppercase letters",
+        "No digits",
+        "No special characters",
+        "Common/dictionary password \u2014 easily cracked"
+      ],
+      "tips": [
+        "Add uppercase letters (A-Z)",
+        "Add numbers (0-9)",
+        "Add symbols (!@#$%^&*)",
+        "Use a unique passphrase not found in any dictionary"
+      ]
+    }
+  ],
+  "policy_violations": [
+    {
+      "password": "abc",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing digit",
+        "Missing special character"
+      ]
+    },
+    {
+      "password": "password",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing digit",
+        "Missing special character",
+        "Password in common password list"
+      ]
+    },
+    {
+      "password": "123456",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing special character",
+        "Password in common password list"
+      ]
+    },
+    {
+      "password": "qwerty123",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing special character"
+      ]
+    },
+    {
+      "password": "Alice2024!",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)"
+      ]
+    },
+    {
+      "password": "P@ssw0rd",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)"
+      ]
+    },
+    {
+      "password": "Tr0ub4dor&3",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)"
+      ]
+    },
+    {
+      "password": "correct-horse-battery-staple",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Missing uppercase letter",
+        "Missing digit"
+      ]
+    },
+    {
+      "password": "admin",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing digit",
+        "Missing special character",
+        "Password in common password list"
+      ]
+    },
+    {
+      "password": "iloveyou",
+      "policy": {
+        "min_length": 12,
+        "require_upper": true,
+        "require_digit": true,
+        "require_symbol": true,
+        "block_common": true
+      },
+      "passed": false,
+      "violations": [
+        "Too short (minimum 12 characters required)",
+        "Missing uppercase letter",
+        "Missing digit",
+        "Missing special character",
+        "Password in common password list"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Enforce minimum 12-character passwords across all accounts",
+    "Require uppercase, lowercase, digit, and symbol in every password",
+    "Deploy a password manager to avoid password reuse",
+    "Implement account lockout after 5 failed attempts (NIST SP 800-63B)",
+    "Store passwords using bcrypt, scrypt, or Argon2 \u2014 never MD5 or SHA-1",
+    "Enable Multi-Factor Authentication (MFA) on all accounts",
+    "Run quarterly password audits to detect weak or reused passwords",
+    "Block commonly known passwords using a deny-list at registration",
+    "Educate users on phishing and credential stuffing risks",
+    "Monitor authentication logs for brute-force patterns"
+  ]
+}

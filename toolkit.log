@@ -1,0 +1,20 @@
+[2026-05-10 19:21:23] [INFO    ] ============================================================
+[2026-05-10 19:21:23] [INFO    ]   PASSWORD CRACKING & CREDENTIAL ATTACK SUITE
+[2026-05-10 19:21:23] [INFO    ]   ETHICAL SIMULATION MODE
+[2026-05-10 19:21:23] [INFO    ] ============================================================
+[2026-05-10 19:21:23] [INFO    ] 
+[MODULE 1] Dictionary Generator
+[2026-05-10 19:21:23] [INFO    ] Dictionary Generator: starting wordlist generation...
+[2026-05-10 19:21:23] [INFO    ]   [+] Added 48 common passwords
+[2026-05-10 19:21:23] [INFO    ]   [+] Generated 13 name+DOB variants
+[2026-05-10 19:21:23] [INFO    ]   [+] Final wordlist size: 6301 entries
+[2026-05-10 19:21:23] [INFO    ] 
+[MODULE 2] Hash Extractor
+[2026-05-10 19:21:23] [WARNING ] /etc/shadow not found. Using simulation data.
+[2026-05-10 19:21:23] [INFO    ] 
+[MODULE 3] Brute-Force Simulator
+[2026-05-10 19:21:23] [INFO    ] Dictionary attack: 2000 words vs 10 hashes (MD5)
+[2026-05-10 19:21:23] [INFO    ] 
+[MODULE 4] Password Strength Analyzer
+[2026-05-10 19:21:23] [INFO    ] 
+[MODULE 5] Report Generator

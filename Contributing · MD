@@ -1,0 +1,19 @@
+# Contributing
+
+## Ethical Requirements
+All contributions must be for **defensive security and educational purposes only**.
+No offensive functionality (live credential dumping, network scanning, etc.) will be accepted.
+
+## Adding Detection Rules
+- Every new wordlist strategy must include a comment explaining real-world usage
+- Every new hash algorithm must include its crack speed and a recommendation note
+- Follow PEP 8 — run `flake8 toolkit.py` before submitting
+
+## Reporting Issues
+Open a GitHub issue with: description, Python version, OS, reproduction steps.
+
+## Areas Needing Help
+- Argon2 / scrypt support via `passlib`
+- YAML-configurable policy rules
+- Unit tests (`pytest`) for each module
+- Password breach database integration (HaveIBeenPwned API)
